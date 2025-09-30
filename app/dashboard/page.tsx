@@ -9,32 +9,31 @@ import DashboardCharts from "@/components/dashboard/DashboardCharts";
 function getRoleGreeting(role: string): string {
   switch (role) {
     case "india_admin":
-      return "Namaste";
+      return "Circor India Admin Panel";
     case "france_admin":
-      return "Hola"; // As requested by user
+      return "Circor France Admin Panel";
     case "us_admin":
-      return "Hi";
+      return "Circor US Admin Panel";
     case "admin":
-      return "Hello";
+      return "Circor Super Admin Panel";
     default:
       return "Welcome";
   }
 }
-
-function getRoleTitle(role: string): string {
-  switch (role) {
-    case "india_admin":
-      return "India Admin Dashboard";
-    case "france_admin":
-      return "France Admin Dashboard";
-    case "us_admin":
-      return "US Admin Dashboard";
-    case "admin":
-      return "Super Admin Dashboard";
-    default:
-      return "Dashboard";
-  }
-}
+// function getRoleTitle(role: string): string {
+//   switch (role) {
+//     case "india_admin":
+//       return "India Admin Dashboard";
+//     case "france_admin":
+//       return "France Admin Dashboard";
+//     case "us_admin":
+//       return "US Admin Dashboard";
+//     case "admin":
+//       return "Super Admin Dashboard";
+//     default:
+//       return "Dashboard";
+//   }
+// }
 
 async function getDashboardData(role: string) {
   try {
@@ -110,7 +109,7 @@ export default async function DashboardPage() {
   }
 
   const greeting = getRoleGreeting(session.role);
-  const title = getRoleTitle(session.role);
+  // const title = getRoleTitle(session.role);
   const dashboardData = await getDashboardData(session.role);
 
   return (
@@ -177,9 +176,7 @@ export default async function DashboardPage() {
         <div className="space-y-8">
           {/* Welcome Section */}
           <div className="text-center space-y-4">
-            <h1 className="text-4xl font-bold text-balance">
-              {greeting}! Welcome to your {title}
-            </h1>
+            <h1 className="text-4xl font-bold text-balance">{greeting}!</h1>
             <p className="text-muted-foreground text-lg">
               Manage your regional operations and access your administrative
               tools

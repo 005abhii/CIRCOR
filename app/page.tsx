@@ -9,16 +9,16 @@ export default function HomePage() {
           <div className="w-16 h-16 bg-accent rounded-xl flex items-center justify-center mx-auto">
             <div className="w-8 h-8 bg-accent-foreground rounded-md"></div>
           </div>
-          <h1 className="text-4xl font-semibold tracking-tight text-balance">
-            CIRCOR
-          </h1>{" "}
-          <h1 className="text-4xl font-semibold tracking-tight text-balance">
-            Employee Payroll System
-          </h1>
-          <p className="text-muted-foreground text-pretty leading-relaxed">
-            Access your payroll information, manage your profile, and stay
-            connected with your global team.
-          </p>
+          <div className="text-center max-w-md">
+            <div className="mb-4 text-4xl font-semibold"> CIRCOR</div>
+            <h2 className="text-4xl font-semibold leading-tight mb-2">
+              Employee Payroll <br /> Integration Platform
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Access your payroll information, manage your profile, and stay
+              connected with your global team.
+            </p>
+          </div>
         </div>
 
         <div className="flex flex-col gap-3">
